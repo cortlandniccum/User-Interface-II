@@ -133,7 +133,11 @@ footer{
 
 
 @media(max-width: 800px) {
-
+    .img, .topimg{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    }
 }
 
 @media(max-width: 500px) {
@@ -142,10 +146,14 @@ footer{
     }
     .bottom{
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
     }
     .img{
         justify-content: center;
         flex-wrap: wrap;
+    }
+    footer{
+        height: 20vh;
+        align-items: center;
     }
 }
