@@ -37,6 +37,12 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+*{
+    box-sizing: border-box;/*respect the width of the box, apply padding or border within the width it's been given not in addition to it*/
+    max-width: 100%; /*maje it so that elements can never be bigger than their parents, stops horizontal scroll bar*/
+    padding: 0;
+    margin: 0;
+}
 
 /*General Styles*/
 html{
@@ -86,17 +92,19 @@ a:hover{
     text-align: center;
     width: 100%;
     margin: auto;
+    padding: 20px;
 }
 .main-photo{
     display: flex;
     justify-content: center;
     padding: 15px;
 }
-.main-photo img{
+.main-photo{
     width: 100%;
 }
 .bottom{
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -114,4 +122,30 @@ footer{
     justify-content: center;
     padding: 1% 0;
     width: 100%;
+    background-color: lightgray;
+}
+.img{
+    display: flex;
+    width: 100%;
+}
+
+
+
+
+@media(max-width: 800px) {
+
+}
+
+@media(max-width: 500px) {
+    nav{
+        flex-direction: column;
+    }
+    .bottom{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .img{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
